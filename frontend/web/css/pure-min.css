@@ -1,0 +1,46 @@
+.progress {
+	position: relative;
+	width: 100% !important;
+    height: 7px !important;
+    margin-top: -9px!important;
+	border: 1px solid #DDD!important;
+	border-radius: 3px!important;
+}
+.bar{
+	background: #8bbc57 !important;
+	height: 7px!important;
+	width: 1%;
+	/* transition animation */
+	-webkit-transition: width .3s!important;
+		-moz-transition: width .3s!important;
+			transition: width .3s!important;
+}
+
+
+/*
+.progress {
+	position: relative;
+	width: 100%;
+	margin: 10px 0px;
+	border: 1px solid #DDD;
+	padding: 5px;
+	border-radius: 3px;
+}
+.bar{
+	background: #8bbc57;
+	height: 20px;
+	width: 0%;
+-webkit-transition: width .3s;
+-moz-transition: width .3s;
+transition: width .3s;
+
+}
+.percent {
+    position: absolute;
+    display: inline-block;
+    top: 9px;
+    left: 48%;
+    color: black;
+    font-weight: bold;
+}
+*/

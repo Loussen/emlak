@@ -1,0 +1,86 @@
+==============================================================================
+her ilin sonunda
+	yeni il ucun arxiv bazasi yarat
+	announcesSearchController faylinda diger arxivler kimi bunuda elave et
+	common.config.params faylinda yeni ili elave et lazimi formada her 2 arraya
+	
+==============================================================================
+
+Mail gondermek lazim olarsa:
+// use frontend\web\PHPMailer\Phpmailer;
+$mail = new PHPMailer();
+
+/*
+$body             = file_get_contents('contents.html');
+$body             = eregi_replace("[\]",'',$body);
+$mail->MsgHTML($body);
+$mail->AddAttachment("images/phpmailer.gif");      // attachment
+$mail->AddAttachment("images/phpmailer_mini.gif"); // attachment
+*/
+
+$mail->SetFrom('office@emlak.az', 'Emlak.az');
+$mail->AddReplyTo('e.alizade92@gmail.com');
+$mail->AddAddress('e.alizade92@gmail.com');
+$mail->Subject='mmmm';
+$mail->MsgHTML('ssss');
+$mail->Send();
+
+
+Elanin wekillerinin save olundugu papkanin adi deyiwilerse eger.. bu fayllarda da deyiwilmelidir: (announces)
+	jquery_upload_script.js
+	elan-ver.js
+	ElanVerController.php
+	views/elan-ver/index.php
+	backend/components/MyFunctions.php
+	
+	
+Emeliyyatlarin siyahisi (archiveDb bazasi ucun operations):
+	insert					elan bazaya elave edildi
+	update					elanda duzeliw edildi
+	update_edited			duzeliw edilmiw elanda, duzeliw edildi...
+	accept_edited			duzeliw ucun sorgu gonderildi, qebul edildi...
+	not_accept_edited		duzeliw ucun sorgu gonderildi, lakin qebul edilmedi...
+	accept					elan qebul edildi
+	not_accept				elan gonderildi, lakin qebul edilmedi
+	deactive				elan deaktiv edildi
+	active					elan aktiv edildi
+	email_change			User emailini deyiwdi...
+	announce_ended			Elanin muddeti bitdi ve gonderildi archive bazalarinin en sonuncusuna
+	admin_deleted			Admin elani sildi
+	user_deleted			Istifadeci oz elanini sildi
+	admin_announce_foward		Admin elani ireli cekdi
+	admin_announce_urgently		Admin elani tecili etdi
+	admin_announce_search		Admin elani axtarisda ireli cekdi
+	admin_do_premium			Admin elani premium etdi
+	admin_remove_premium		Admin premiumu legv etdi
+	admin_change_package_announce		admin userde elan paket deyiwikliyi etdi
+	admin_change_package_foward			admin userde ireli cekme paket deyiwikliyi etdi
+	admin_add_package_mobile			admin mobil nomreye paket verdi
+	admin_change_package_mobile			admin mobil nomreye paket verdi
+	admin_change_premium_date			admin istifadecinin emlakcilar bolmesinde muddetini deyiwdi
+	admin_delete_package_mobile			admin nomrede paketi legv etdi
+	unknow								daxil olmamiw istifadeci (namelum wexs)
+	user_do_premium						istifadeci ve ya unknow elani premium etdi
+	user_do_foward						istifadeci ve ya unknow elani ireli cekdi
+	user_do_urgently					istifadeci ve ya unknow elani tecili etdi
+	mobile_get_package					istifadeci telefon nomresine paket aldi
+	user_do_searchFoward				istifadeci ve ya unknow elani axtarisda ireli cekdi
+	user_do_Share						istifadeci ve ya unknow elani fbda paylawmaq ucun emeliyat apardi
+	admin_remove_share					admin istifadecinin etdiyi share emeliyyati legv etdi
+	profil_get_rieltorPackage			profil ozunu emlakcilar bolmesine daxil etdi
+	profil_get_package					profil elan yerlesdirmek paketi aldi
+	user_do_imgDownload					istifadeci elanin orjinal wekillerini yukledi
+	profil_get_fowardPackage			profil elan irelicekme paketi aldi
+	profil_get_searchFowardPackage		profil elani axtarisda irelicekme paketi aldi
+	
+	
+	
+insert_type:
+	free							pulsuz elan limiti var
+	mobile_package:0504430050		nomreden paket cixdi. (paket qaligi gostermelidi)
+	user_package					userden paket cixdi. (paket qaligi gostermelidi)
+
+
+	Fuad
+
+	CDN servere shekilleri atdiqda onlari bazada shekillerdeki il ve aya gore axtarib cdn_serveri 1 ile update etmek ve announces cedvelinde de bunlarin cdn_Serverini 1 ile update etmek, cunki kohne elan arxiv olunanda announces cedveline insert olunur (copy olunur) ve cdn_serveri de 1 kimi dushmelidir.

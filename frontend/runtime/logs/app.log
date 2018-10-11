@@ -1,0 +1,684 @@
+2018-10-11 11:19:48 [127.0.0.1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'emlakaz'@'localhost' (using password: YES) in C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Connection.php:583
+Stack trace:
+#0 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Connection.php(583): PDO->__construct('mysql:host=loca...', 'emlakaz', 'Jkrfh72VXsb4DL', NULL)
+#1 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Connection.php(840): yii\db\Connection->open()
+#3 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Connection.php(827): yii\db\Connection->getMasterPdo()
+#4 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#5 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare(true)
+#6 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\mysql\Schema.php(198): yii\db\Command->queryAll()
+#8 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\mysql\Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Schema.php(132): yii\db\mysql\Schema->loadTableSchema('settings')
+#10 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\ActiveRecord.php(294): yii\db\Schema->getTableSchema('settings')
+#11 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\ActiveRecord.php(317): yii\db\ActiveRecord::getTableSchema()
+#12 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\ActiveRecord.php(176): yii\db\ActiveRecord::primaryKey()
+#13 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveRecord::findByCondition(1)
+#14 C:\OSPanel\domains\emlak.az\frontend\components\MyController.php(296): yii\db\BaseActiveRecord::findOne(1)
+#15 C:\OSPanel\domains\emlak.az\frontend\components\MyController.php(78): frontend\components\MyController->getCurrentLanguage()
+#16 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Object.php(107): frontend\components\MyController->init()
+#17 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Controller.php(81): yii\base\Object->__construct(Array)
+#18 [internal function]: yii\base\Controller->__construct('site', Object(yii\web\Application), Array)
+#19 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\di\Container.php(366): ReflectionClass->newInstanceArgs(Array)
+#20 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('frontend\\contro...', Array, Array)
+#21 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\BaseYii.php(340): yii\di\Container->get('frontend\\contro...', Array)
+#22 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Module.php(568): yii\BaseYii::createObject('frontend\\contro...', Array)
+#23 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Module.php(521): yii\base\Module->createControllerByID('site')
+#24 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('')
+#25 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#26 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 C:\OSPanel\domains\emlak.az\frontend\web\index.php(39): yii\base\Application->run()
+#28 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'emlakaz'@'localhost' (using password: YES) in C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Connection.php(840): yii\db\Connection->open()
+#1 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Connection.php(827): yii\db\Connection->getMasterPdo()
+#2 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#3 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare(true)
+#4 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\mysql\Schema.php(198): yii\db\Command->queryAll()
+#6 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\mysql\Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Schema.php(132): yii\db\mysql\Schema->loadTableSchema('settings')
+#8 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\ActiveRecord.php(294): yii\db\Schema->getTableSchema('settings')
+#9 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\ActiveRecord.php(317): yii\db\ActiveRecord::getTableSchema()
+#10 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\ActiveRecord.php(176): yii\db\ActiveRecord::primaryKey()
+#11 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveRecord::findByCondition(1)
+#12 C:\OSPanel\domains\emlak.az\frontend\components\MyController.php(296): yii\db\BaseActiveRecord::findOne(1)
+#13 C:\OSPanel\domains\emlak.az\frontend\components\MyController.php(78): frontend\components\MyController->getCurrentLanguage()
+#14 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Object.php(107): frontend\components\MyController->init()
+#15 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Controller.php(81): yii\base\Object->__construct(Array)
+#16 [internal function]: yii\base\Controller->__construct('site', Object(yii\web\Application), Array)
+#17 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\di\Container.php(366): ReflectionClass->newInstanceArgs(Array)
+#18 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('frontend\\contro...', Array, Array)
+#19 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\BaseYii.php(340): yii\di\Container->get('frontend\\contro...', Array)
+#20 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Module.php(568): yii\BaseYii::createObject('frontend\\contro...', Array)
+#21 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Module.php(521): yii\base\Module->createControllerByID('site')
+#22 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('')
+#23 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#24 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 C:\OSPanel\domains\emlak.az\frontend\web\index.php(39): yii\base\Application->run()
+#26 {main}
+Additional Information:
+
+2018-10-11 11:19:47 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_HTTPS' => 'on'
+    'REDIRECT_SSL_TLS_SNI' => 'emlak.azz'
+    'REDIRECT_STATUS' => '200'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'emlak.azz'
+    'SSL_SERVER_S_DN_CN' => 'localhost'
+    'SSL_SERVER_I_DN_CN' => 'ospanel'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.27'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '1'
+    'SSL_SERVER_M_SERIAL' => 'AF90673611D8DD9B'
+    'SSL_SERVER_V_START' => 'Dec 23 10:54:34 2016 GMT'
+    'SSL_SERVER_V_END' => 'Dec 20 10:54:34 2031 GMT'
+    'SSL_SERVER_S_DN' => 'CN=localhost'
+    'SSL_SERVER_I_DN' => 'CN=ospanel'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP_HOST' => 'emlak.azz'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,az;q=0.8,tr;q=0.7,es;q=0.6,la;q=0.5'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.1\\ext;c:\\ospanel\\modules\\php\\PHP-7.1\\pear;c:\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;c:\\ospanel\\modules\\redis\\Redis-3.2-x64;c:\\ospanel\\modules\\http\\Apache-PHP-7\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'emlak.azz'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/emlak.az'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/emlak.az'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/emlak.az/frontend/web/index.php'
+    'REMOTE_PORT' => '18076'
+    'REDIRECT_URL' => '/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1539242387.468
+    'REQUEST_TIME' => 1539242387
+    'argv' => []
+    'argc' => 0
+]
+2018-10-11 11:42:10 [127.0.0.1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'emlakaz'@'localhost' (using password: YES) in C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Connection.php:583
+Stack trace:
+#0 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Connection.php(583): PDO->__construct('mysql:host=loca...', 'emlakaz', 'Jkrfh72VXsb4DL', NULL)
+#1 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Connection.php(840): yii\db\Connection->open()
+#3 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Connection.php(827): yii\db\Connection->getMasterPdo()
+#4 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#5 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare(true)
+#6 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\mysql\Schema.php(198): yii\db\Command->queryAll()
+#8 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\mysql\Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Schema.php(132): yii\db\mysql\Schema->loadTableSchema('settings')
+#10 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\ActiveRecord.php(294): yii\db\Schema->getTableSchema('settings')
+#11 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\ActiveRecord.php(317): yii\db\ActiveRecord::getTableSchema()
+#12 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\ActiveRecord.php(176): yii\db\ActiveRecord::primaryKey()
+#13 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveRecord::findByCondition(1)
+#14 C:\OSPanel\domains\emlak.az\frontend\components\MyController.php(296): yii\db\BaseActiveRecord::findOne(1)
+#15 C:\OSPanel\domains\emlak.az\frontend\components\MyController.php(78): frontend\components\MyController->getCurrentLanguage()
+#16 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Object.php(107): frontend\components\MyController->init()
+#17 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Controller.php(81): yii\base\Object->__construct(Array)
+#18 [internal function]: yii\base\Controller->__construct('site', Object(yii\web\Application), Array)
+#19 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\di\Container.php(366): ReflectionClass->newInstanceArgs(Array)
+#20 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('frontend\\contro...', Array, Array)
+#21 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\BaseYii.php(340): yii\di\Container->get('frontend\\contro...', Array)
+#22 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Module.php(568): yii\BaseYii::createObject('frontend\\contro...', Array)
+#23 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Module.php(521): yii\base\Module->createControllerByID('site')
+#24 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('')
+#25 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#26 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 C:\OSPanel\domains\emlak.az\frontend\web\index.php(39): yii\base\Application->run()
+#28 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'emlakaz'@'localhost' (using password: YES) in C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Connection.php(840): yii\db\Connection->open()
+#1 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Connection.php(827): yii\db\Connection->getMasterPdo()
+#2 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#3 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare(true)
+#4 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\mysql\Schema.php(198): yii\db\Command->queryAll()
+#6 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\mysql\Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Schema.php(132): yii\db\mysql\Schema->loadTableSchema('settings')
+#8 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\ActiveRecord.php(294): yii\db\Schema->getTableSchema('settings')
+#9 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\ActiveRecord.php(317): yii\db\ActiveRecord::getTableSchema()
+#10 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\ActiveRecord.php(176): yii\db\ActiveRecord::primaryKey()
+#11 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveRecord::findByCondition(1)
+#12 C:\OSPanel\domains\emlak.az\frontend\components\MyController.php(296): yii\db\BaseActiveRecord::findOne(1)
+#13 C:\OSPanel\domains\emlak.az\frontend\components\MyController.php(78): frontend\components\MyController->getCurrentLanguage()
+#14 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Object.php(107): frontend\components\MyController->init()
+#15 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Controller.php(81): yii\base\Object->__construct(Array)
+#16 [internal function]: yii\base\Controller->__construct('site', Object(yii\web\Application), Array)
+#17 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\di\Container.php(366): ReflectionClass->newInstanceArgs(Array)
+#18 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('frontend\\contro...', Array, Array)
+#19 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\BaseYii.php(340): yii\di\Container->get('frontend\\contro...', Array)
+#20 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Module.php(568): yii\BaseYii::createObject('frontend\\contro...', Array)
+#21 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Module.php(521): yii\base\Module->createControllerByID('site')
+#22 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('')
+#23 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#24 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 C:\OSPanel\domains\emlak.az\frontend\web\index.php(39): yii\base\Application->run()
+#26 {main}
+Additional Information:
+
+2018-10-11 11:42:09 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_HTTPS' => 'on'
+    'REDIRECT_SSL_TLS_SNI' => 'emlak.azz'
+    'REDIRECT_STATUS' => '200'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'emlak.azz'
+    'SSL_SERVER_S_DN_CN' => 'localhost'
+    'SSL_SERVER_I_DN_CN' => 'ospanel'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.27'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '1'
+    'SSL_SERVER_M_SERIAL' => 'AF90673611D8DD9B'
+    'SSL_SERVER_V_START' => 'Dec 23 10:54:34 2016 GMT'
+    'SSL_SERVER_V_END' => 'Dec 20 10:54:34 2031 GMT'
+    'SSL_SERVER_S_DN' => 'CN=localhost'
+    'SSL_SERVER_I_DN' => 'CN=ospanel'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP_HOST' => 'emlak.azz'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,az;q=0.8,tr;q=0.7,es;q=0.6,la;q=0.5'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.1\\ext;c:\\ospanel\\modules\\php\\PHP-7.1\\pear;c:\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;c:\\ospanel\\modules\\redis\\Redis-3.2-x64;c:\\ospanel\\modules\\http\\Apache-PHP-7\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'emlak.azz'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/emlak.az'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/emlak.az'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/emlak.az/frontend/web/index.php'
+    'REMOTE_PORT' => '20236'
+    'REDIRECT_URL' => '/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1539243729.534
+    'REQUEST_TIME' => 1539243729
+    'argv' => []
+    'argc' => 0
+]
+2018-10-11 11:42:11 [127.0.0.1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'emlakaz'@'localhost' (using password: YES) in C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Connection.php:583
+Stack trace:
+#0 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Connection.php(583): PDO->__construct('mysql:host=loca...', 'emlakaz', 'Jkrfh72VXsb4DL', NULL)
+#1 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Connection.php(840): yii\db\Connection->open()
+#3 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Connection.php(827): yii\db\Connection->getMasterPdo()
+#4 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#5 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare(true)
+#6 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\mysql\Schema.php(198): yii\db\Command->queryAll()
+#8 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\mysql\Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Schema.php(132): yii\db\mysql\Schema->loadTableSchema('settings')
+#10 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\ActiveRecord.php(294): yii\db\Schema->getTableSchema('settings')
+#11 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\ActiveRecord.php(317): yii\db\ActiveRecord::getTableSchema()
+#12 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\ActiveRecord.php(176): yii\db\ActiveRecord::primaryKey()
+#13 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveRecord::findByCondition(1)
+#14 C:\OSPanel\domains\emlak.az\frontend\components\MyController.php(296): yii\db\BaseActiveRecord::findOne(1)
+#15 C:\OSPanel\domains\emlak.az\frontend\components\MyController.php(78): frontend\components\MyController->getCurrentLanguage()
+#16 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Object.php(107): frontend\components\MyController->init()
+#17 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Controller.php(81): yii\base\Object->__construct(Array)
+#18 [internal function]: yii\base\Controller->__construct('site', Object(yii\web\Application), Array)
+#19 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\di\Container.php(366): ReflectionClass->newInstanceArgs(Array)
+#20 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('frontend\\contro...', Array, Array)
+#21 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\BaseYii.php(340): yii\di\Container->get('frontend\\contro...', Array)
+#22 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Module.php(568): yii\BaseYii::createObject('frontend\\contro...', Array)
+#23 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Module.php(521): yii\base\Module->createControllerByID('site')
+#24 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('')
+#25 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#26 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 C:\OSPanel\domains\emlak.az\frontend\web\index.php(39): yii\base\Application->run()
+#28 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'emlakaz'@'localhost' (using password: YES) in C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Connection.php(840): yii\db\Connection->open()
+#1 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Connection.php(827): yii\db\Connection->getMasterPdo()
+#2 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#3 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare(true)
+#4 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\mysql\Schema.php(198): yii\db\Command->queryAll()
+#6 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\mysql\Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\Schema.php(132): yii\db\mysql\Schema->loadTableSchema('settings')
+#8 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\ActiveRecord.php(294): yii\db\Schema->getTableSchema('settings')
+#9 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\ActiveRecord.php(317): yii\db\ActiveRecord::getTableSchema()
+#10 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\ActiveRecord.php(176): yii\db\ActiveRecord::primaryKey()
+#11 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveRecord::findByCondition(1)
+#12 C:\OSPanel\domains\emlak.az\frontend\components\MyController.php(296): yii\db\BaseActiveRecord::findOne(1)
+#13 C:\OSPanel\domains\emlak.az\frontend\components\MyController.php(78): frontend\components\MyController->getCurrentLanguage()
+#14 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Object.php(107): frontend\components\MyController->init()
+#15 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Controller.php(81): yii\base\Object->__construct(Array)
+#16 [internal function]: yii\base\Controller->__construct('site', Object(yii\web\Application), Array)
+#17 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\di\Container.php(366): ReflectionClass->newInstanceArgs(Array)
+#18 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('frontend\\contro...', Array, Array)
+#19 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\BaseYii.php(340): yii\di\Container->get('frontend\\contro...', Array)
+#20 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Module.php(568): yii\BaseYii::createObject('frontend\\contro...', Array)
+#21 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Module.php(521): yii\base\Module->createControllerByID('site')
+#22 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('')
+#23 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#24 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 C:\OSPanel\domains\emlak.az\frontend\web\index.php(39): yii\base\Application->run()
+#26 {main}
+Additional Information:
+
+2018-10-11 11:42:11 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_HTTPS' => 'on'
+    'REDIRECT_SSL_TLS_SNI' => 'emlak.azz'
+    'REDIRECT_STATUS' => '200'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'emlak.azz'
+    'SSL_SERVER_S_DN_CN' => 'localhost'
+    'SSL_SERVER_I_DN_CN' => 'ospanel'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.27'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '1'
+    'SSL_SERVER_M_SERIAL' => 'AF90673611D8DD9B'
+    'SSL_SERVER_V_START' => 'Dec 23 10:54:34 2016 GMT'
+    'SSL_SERVER_V_END' => 'Dec 20 10:54:34 2031 GMT'
+    'SSL_SERVER_S_DN' => 'CN=localhost'
+    'SSL_SERVER_I_DN' => 'CN=ospanel'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP_HOST' => 'emlak.azz'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,az;q=0.8,tr;q=0.7,es;q=0.6,la;q=0.5'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.1\\ext;c:\\ospanel\\modules\\php\\PHP-7.1\\pear;c:\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;c:\\ospanel\\modules\\redis\\Redis-3.2-x64;c:\\ospanel\\modules\\http\\Apache-PHP-7\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'emlak.azz'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/emlak.az'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/emlak.az'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/emlak.az/frontend/web/index.php'
+    'REMOTE_PORT' => '20237'
+    'REDIRECT_URL' => '/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1539243731.064
+    'REQUEST_TIME' => 1539243731
+    'argv' => []
+    'argc' => 0
+]
+2018-10-11 11:50:39 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "frontend/web/". in C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('frontend/web/', Array)
+#1 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\OSPanel\domains\emlak.az\frontend\web\index.php(39): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\OSPanel\domains\emlak.az\frontend\web\index.php(39): yii\base\Application->run()
+#2 {main}
+2018-10-11 11:50:38 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'emlak.azz'
+    'SSL_SERVER_S_DN_CN' => 'localhost'
+    'SSL_SERVER_I_DN_CN' => 'ospanel'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.27'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '1'
+    'SSL_SERVER_M_SERIAL' => 'AF90673611D8DD9B'
+    'SSL_SERVER_V_START' => 'Dec 23 10:54:34 2016 GMT'
+    'SSL_SERVER_V_END' => 'Dec 20 10:54:34 2031 GMT'
+    'SSL_SERVER_S_DN' => 'CN=localhost'
+    'SSL_SERVER_I_DN' => 'CN=ospanel'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP_HOST' => 'emlak.azz'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,az;q=0.8,tr;q=0.7,es;q=0.6,la;q=0.5'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.1\\ext;c:\\ospanel\\modules\\php\\PHP-7.1\\pear;c:\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;c:\\ospanel\\modules\\redis\\Redis-3.2-x64;c:\\ospanel\\modules\\http\\Apache-PHP-7\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'emlak.azz'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/emlak.az'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/emlak.az'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/emlak.az/frontend/web/index.php'
+    'REMOTE_PORT' => '20953'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/frontend/web/'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1539244238.767
+    'REQUEST_TIME' => 1539244238
+    'argv' => []
+    'argc' => 0
+]
+2018-10-11 11:50:43 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "frontend/web/". in C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('frontend/web/', Array)
+#1 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\OSPanel\domains\emlak.az\frontend\web\index.php(39): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\OSPanel\domains\emlak.az\frontend\web\index.php(39): yii\base\Application->run()
+#2 {main}
+2018-10-11 11:50:42 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'emlak.azz'
+    'SSL_SERVER_S_DN_CN' => 'localhost'
+    'SSL_SERVER_I_DN_CN' => 'ospanel'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.27'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '1'
+    'SSL_SERVER_M_SERIAL' => 'AF90673611D8DD9B'
+    'SSL_SERVER_V_START' => 'Dec 23 10:54:34 2016 GMT'
+    'SSL_SERVER_V_END' => 'Dec 20 10:54:34 2031 GMT'
+    'SSL_SERVER_S_DN' => 'CN=localhost'
+    'SSL_SERVER_I_DN' => 'CN=ospanel'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '8120c22ed0c81be47eb3548cba83a06c3a6a1ba8b3ee35dc24a718862e9a6957'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'emlak.azz'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,az;q=0.8,tr;q=0.7,es;q=0.6,la;q=0.5'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.1\\ext;c:\\ospanel\\modules\\php\\PHP-7.1\\pear;c:\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;c:\\ospanel\\modules\\redis\\Redis-3.2-x64;c:\\ospanel\\modules\\http\\Apache-PHP-7\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'emlak.azz'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/emlak.az'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/emlak.az'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/emlak.az/frontend/web/index.php'
+    'REMOTE_PORT' => '20960'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/frontend/web/'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1539244242.991
+    'REQUEST_TIME' => 1539244242
+    'argv' => []
+    'argc' => 0
+]
+2018-10-11 11:50:47 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "frontend/web/". in C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('frontend/web/', Array)
+#1 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\OSPanel\domains\emlak.az\frontend\web\index.php(39): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\OSPanel\domains\emlak.az\frontend\web\index.php(39): yii\base\Application->run()
+#2 {main}
+2018-10-11 11:50:47 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'emlak.azz'
+    'SSL_SERVER_S_DN_CN' => 'localhost'
+    'SSL_SERVER_I_DN_CN' => 'ospanel'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.27'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '1'
+    'SSL_SERVER_M_SERIAL' => 'AF90673611D8DD9B'
+    'SSL_SERVER_V_START' => 'Dec 23 10:54:34 2016 GMT'
+    'SSL_SERVER_V_END' => 'Dec 20 10:54:34 2031 GMT'
+    'SSL_SERVER_S_DN' => 'CN=localhost'
+    'SSL_SERVER_I_DN' => 'CN=ospanel'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '8120c22ed0c81be47eb3548cba83a06c3a6a1ba8b3ee35dc24a718862e9a6957'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'emlak.azz'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,az;q=0.8,tr;q=0.7,es;q=0.6,la;q=0.5'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.1\\ext;c:\\ospanel\\modules\\php\\PHP-7.1\\pear;c:\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;c:\\ospanel\\modules\\redis\\Redis-3.2-x64;c:\\ospanel\\modules\\http\\Apache-PHP-7\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'emlak.azz'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/emlak.az'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/emlak.az'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/emlak.az/frontend/web/index.php'
+    'REMOTE_PORT' => '20966'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/frontend/web/'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1539244247.139
+    'REQUEST_TIME' => 1539244247
+    'argv' => []
+    'argc' => 0
+]
+2018-10-11 11:51:10 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "frontend/web/". in C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('frontend/web/', Array)
+#1 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\OSPanel\domains\emlak.az\frontend\web\index.php(39): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\OSPanel\domains\emlak.az\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\OSPanel\domains\emlak.az\frontend\web\index.php(39): yii\base\Application->run()
+#2 {main}
+2018-10-11 11:51:10 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'emlak.azz'
+    'SSL_SERVER_S_DN_CN' => 'localhost'
+    'SSL_SERVER_I_DN_CN' => 'ospanel'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.27'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '1'
+    'SSL_SERVER_M_SERIAL' => 'AF90673611D8DD9B'
+    'SSL_SERVER_V_START' => 'Dec 23 10:54:34 2016 GMT'
+    'SSL_SERVER_V_END' => 'Dec 20 10:54:34 2031 GMT'
+    'SSL_SERVER_S_DN' => 'CN=localhost'
+    'SSL_SERVER_I_DN' => 'CN=ospanel'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '8120c22ed0c81be47eb3548cba83a06c3a6a1ba8b3ee35dc24a718862e9a6957'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'emlak.azz'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,az;q=0.8,tr;q=0.7,es;q=0.6,la;q=0.5'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.1\\ext;c:\\ospanel\\modules\\php\\PHP-7.1\\pear;c:\\ospanel\\modules\\php\\PHP-7.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;c:\\ospanel\\modules\\redis\\Redis-3.2-x64;c:\\ospanel\\modules\\http\\Apache-PHP-7\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'emlak.azz'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/emlak.az'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/emlak.az'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/emlak.az/frontend/web/index.php'
+    'REMOTE_PORT' => '21006'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/frontend/web/'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1539244270.56
+    'REQUEST_TIME' => 1539244270
+    'argv' => []
+    'argc' => 0
+]
